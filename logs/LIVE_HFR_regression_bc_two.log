@@ -1,4 +1,4 @@
-Namespace(color_only=False, dataset_name='LIVE_HFR', feature_file='features/LIVE_HFR_ST_QUV_NODOG_272_GL_Haar_feats.mat', log_file='logs/LIVE_HFR_regression_bc_two.log', log_short=True, max_thread_count=4, model_name='ST_QUV_NODOG_272_GL_Haar', mos_file='features/LIVE_HFR_metadata.csv', num_cont=16, num_dists=30, num_iterations=100, out_file='result/LIVE_HFR_ST_QUV_NODOG_272_GL_Haar_SVR_corr_bc_two.mat', use_parallel=True)
+Namespace(color_only=False, dataset_name='LIVE_HFR', feature_file='features/LIVE_HFR_ST_HIFRVIQ_Haar_feats.mat', log_file='logs/LIVE_HFR_regression_bc_two.log', log_short=True, max_thread_count=4, model_name='ST_QUV_NODOG_272_GL_Haar', mos_file='features/LIVE_HFR_metadata.csv', num_cont=16, num_dists=30, num_iterations=100, out_file='result/LIVE_HFR_ST_QUV_NODOG_272_GL_Haar_SVR_corr_bc_two.mat', use_parallel=True)
 1 th repeated holdout test
 748-dim features, using SVR2 th repeated holdout test
 
@@ -213,7 +213,7 @@ RMSE Test: 9.044628306761986 (std: 1.1352376305154304)
 
 
 Overall 194.39131665229797 secs lapsed..
-Namespace(color_only=False, dataset_name='LIVE_HFR', feature_file='features/LIVE_HFR_ST_QUV_NODOG_272_GL_Haar_feats.mat', log_file='logs/LIVE_HFR_regression_bc_two.log', log_short=True, max_thread_count=4, model_name='ST_QUV_NODOG_272_GL_Haar', mos_file='features/LIVE_HFR_metadata.csv', num_cont=16, num_dists=30, num_iterations=100, out_file='result/LIVE_HFR_ST_QUV_NODOG_272_GL_Haar_SVR_corr_bc_two.mat', use_parallel=True)
+Namespace(color_only=False, dataset_name='LIVE_HFR', feature_file='features/LIVE_HFR_ST_HIFRVIQ_Haar_feats.mat', log_file='logs/LIVE_HFR_regression_bc_two.log', log_short=True, max_thread_count=4, model_name='ST_QUV_NODOG_272_GL_Haar', mos_file='features/LIVE_HFR_metadata.csv', num_cont=16, num_dists=30, num_iterations=100, out_file='result/LIVE_HFR_ST_QUV_NODOG_272_GL_Haar_SVR_corr_bc_two.mat', use_parallel=True)
 1 th repeated holdout test
 748-dim features, using SVR2 th repeated holdout test
 
@@ -428,7 +428,7 @@ RMSE Test: 9.044628306761986 (std: 1.1352376305154304)
 
 
 Overall 194.39131665229797 secs lapsed..
-Namespace(color_only=False, dataset_name='LIVE_HFR', feature_file='features/LIVE_HFR_ST_QUV_NODOG_272_GL_Haar_ev16_feats.mat', log_file='logs/LIVE_HFR_regression_bc_two.log', log_short=True, max_thread_count=4, model_name='ST_QUV_NODOG_272_GL_Haar_ev16', mos_file='features/LIVE_HFR_metadata.csv', num_cont=16, num_dists=30, num_iterations=100, out_file='result/LIVE_HFR_ST_QUV_NODOG_272_GL_Haar_ev16_SVR_corr_bc_two.mat', use_parallel=True)
+Namespace(color_only=False, dataset_name='LIVE_HFR', feature_file='features/LIVE_HFR_ST_HIFRVIQ_Haar_ev16_feats.mat', log_file='logs/LIVE_HFR_regression_bc_two.log', log_short=True, max_thread_count=4, model_name='ST_QUV_NODOG_272_GL_Haar_ev16', mos_file='features/LIVE_HFR_metadata.csv', num_cont=16, num_dists=30, num_iterations=100, out_file='result/LIVE_HFR_ST_QUV_NODOG_272_GL_Haar_ev16_SVR_corr_bc_two.mat', use_parallel=True)
 1 th repeated holdout test2 th repeated holdout test
 3 th repeated holdout test4 th repeated holdout test
 
@@ -643,7 +643,7 @@ RMSE Test: 9.06040271157189 (std: 1.0854175513421767)
 
 
 Overall 48.64159822463989 secs lapsed..
-Namespace(color_only=False, dataset_name='LIVE_HFR', feature_file='features/LIVE_HFR_ST_QUV_NODOG_272_GL_Haar_ev8_feats.mat', log_file='logs/LIVE_HFR_regression_bc_two.log', log_short=True, max_thread_count=4, model_name='ST_QUV_NODOG_272_GL_Haar_ev8', mos_file='features/LIVE_HFR_metadata.csv', num_cont=16, num_dists=30, num_iterations=100, out_file='result/LIVE_HFR_ST_QUV_NODOG_272_GL_Haar_ev8_SVR_corr_bc_two.mat', use_parallel=True)
+Namespace(color_only=False, dataset_name='LIVE_HFR', feature_file='features/LIVE_HFR_ST_HIFRVIQ_Haar_ev8_feats.mat', log_file='logs/LIVE_HFR_regression_bc_two.log', log_short=True, max_thread_count=4, model_name='ST_QUV_NODOG_272_GL_Haar_ev8', mos_file='features/LIVE_HFR_metadata.csv', num_cont=16, num_dists=30, num_iterations=100, out_file='result/LIVE_HFR_ST_QUV_NODOG_272_GL_Haar_ev8_SVR_corr_bc_two.mat', use_parallel=True)
 1 th repeated holdout test2 th repeated holdout test
 3 th repeated holdout test
 
@@ -858,7 +858,7 @@ RMSE Test: 9.31992040737317 (std: 1.1718075621400188)
 
 
 Overall 48.660712242126465 secs lapsed..
-Namespace(color_only=False, dataset_name='LIVE_HFR', feature_file='features/LIVE_HFR_ST_QUV_NODOG_272_GL_Db2_feats.mat', log_file='logs/LIVE_HFR_regression_bc_two.log', log_short=True, max_thread_count=4, model_name='ST_QUV_NODOG_272_GL_Db2', mos_file='features/LIVE_HFR_metadata.csv', num_cont=16, num_dists=30, num_iterations=100, out_file='result/LIVE_HFR_ST_QUV_NODOG_272_GL_Db2_SVR_corr_bc_two.mat', use_parallel=True)
+Namespace(color_only=False, dataset_name='LIVE_HFR', feature_file='features/LIVE_HFR_ST_HIFRVIQ_Db2_feats.mat', log_file='logs/LIVE_HFR_regression_bc_two.log', log_short=True, max_thread_count=4, model_name='ST_QUV_NODOG_272_GL_Db2', mos_file='features/LIVE_HFR_metadata.csv', num_cont=16, num_dists=30, num_iterations=100, out_file='result/LIVE_HFR_ST_QUV_NODOG_272_GL_Db2_SVR_corr_bc_two.mat', use_parallel=True)
 1 th repeated holdout test2 th repeated holdout test
 3 th repeated holdout test4 th repeated holdout test
 
@@ -1073,7 +1073,7 @@ RMSE Test: 8.675826076029363 (std: 1.1431444795815793)
 
 
 Overall 40.600324869155884 secs lapsed..
-Namespace(color_only=False, dataset_name='LIVE_HFR', feature_file='features/LIVE_HFR_ST_QUV_NODOG_272_GL_Db2_feats.mat', log_file='logs/LIVE_HFR_regression_bc_two.log', log_short=True, max_thread_count=4, model_name='ST_QUV_NODOG_272_GL_Db2', mos_file='features/LIVE_HFR_metadata.csv', num_cont=16, num_dists=30, num_iterations=100, out_file='result/LIVE_HFR_ST_QUV_NODOG_272_GL_Db2_SVR_corr_bc_two.mat', use_parallel=True)
+Namespace(color_only=False, dataset_name='LIVE_HFR', feature_file='features/LIVE_HFR_ST_HIFRVIQ_Db2_feats.mat', log_file='logs/LIVE_HFR_regression_bc_two.log', log_short=True, max_thread_count=4, model_name='ST_QUV_NODOG_272_GL_Db2', mos_file='features/LIVE_HFR_metadata.csv', num_cont=16, num_dists=30, num_iterations=100, out_file='result/LIVE_HFR_ST_QUV_NODOG_272_GL_Db2_SVR_corr_bc_two.mat', use_parallel=True)
 1 th repeated holdout test2 th repeated holdout test
 3 th repeated holdout test4 th repeated holdout test
 
@@ -1288,7 +1288,7 @@ RMSE Test: 8.675826076029363 (std: 1.1431444795815793)
 
 
 Overall 40.600324869155884 secs lapsed..
-Namespace(color_only=False, dataset_name='LIVE_HFR', feature_file='features/LIVE_HFR_ST_QUV_NODOG_272_GL_Db2_ev16_feats.mat', log_file='logs/LIVE_HFR_regression_bc_two.log', log_short=True, max_thread_count=4, model_name='ST_QUV_NODOG_272_GL_Db2_ev16', mos_file='features/LIVE_HFR_metadata.csv', num_cont=16, num_dists=30, num_iterations=100, out_file='result/LIVE_HFR_ST_QUV_NODOG_272_GL_Db2_ev16_SVR_corr_bc_two.mat', use_parallel=True)
+Namespace(color_only=False, dataset_name='LIVE_HFR', feature_file='features/LIVE_HFR_ST_HIFRVIQ_Db2_ev16_feats.mat', log_file='logs/LIVE_HFR_regression_bc_two.log', log_short=True, max_thread_count=4, model_name='ST_QUV_NODOG_272_GL_Db2_ev16', mos_file='features/LIVE_HFR_metadata.csv', num_cont=16, num_dists=30, num_iterations=100, out_file='result/LIVE_HFR_ST_QUV_NODOG_272_GL_Db2_ev16_SVR_corr_bc_two.mat', use_parallel=True)
 1 th repeated holdout test2 th repeated holdout test
 3 th repeated holdout test
 
@@ -1503,7 +1503,7 @@ RMSE Test: 8.895856517426724 (std: 1.2707164097506107)
 
 
 Overall 51.4059898853302 secs lapsed..
-Namespace(color_only=False, dataset_name='LIVE_HFR', feature_file='features/LIVE_HFR_ST_QUV_NODOG_272_GL_Db2_ev16_feats.mat', log_file='logs/LIVE_HFR_regression_bc_two.log', log_short=True, max_thread_count=4, model_name='ST_QUV_NODOG_272_GL_Db2_ev16', mos_file='features/LIVE_HFR_metadata.csv', num_cont=16, num_dists=30, num_iterations=100, out_file='result/LIVE_HFR_ST_QUV_NODOG_272_GL_Db2_ev16_SVR_corr_bc_two.mat', use_parallel=True)
+Namespace(color_only=False, dataset_name='LIVE_HFR', feature_file='features/LIVE_HFR_ST_HIFRVIQ_Db2_ev16_feats.mat', log_file='logs/LIVE_HFR_regression_bc_two.log', log_short=True, max_thread_count=4, model_name='ST_QUV_NODOG_272_GL_Db2_ev16', mos_file='features/LIVE_HFR_metadata.csv', num_cont=16, num_dists=30, num_iterations=100, out_file='result/LIVE_HFR_ST_QUV_NODOG_272_GL_Db2_ev16_SVR_corr_bc_two.mat', use_parallel=True)
 1 th repeated holdout test2 th repeated holdout test
 3 th repeated holdout test
 
@@ -1718,7 +1718,7 @@ RMSE Test: 8.895856517426724 (std: 1.2707164097506107)
 
 
 Overall 51.4059898853302 secs lapsed..
-Namespace(color_only=False, dataset_name='LIVE_HFR', feature_file='features/LIVE_HFR_ST_QUV_NODOG_272_GL_Db2_ev8_feats.mat', log_file='logs/LIVE_HFR_regression_bc_two.log', log_short=True, max_thread_count=4, model_name='ST_QUV_NODOG_272_GL_Db2_ev8', mos_file='features/LIVE_HFR_metadata.csv', num_cont=16, num_dists=30, num_iterations=100, out_file='result/LIVE_HFR_ST_QUV_NODOG_272_GL_Db2_ev8_SVR_corr_bc_two.mat', use_parallel=True)
+Namespace(color_only=False, dataset_name='LIVE_HFR', feature_file='features/LIVE_HFR_ST_HIFRVIQ_Db2_ev8_feats.mat', log_file='logs/LIVE_HFR_regression_bc_two.log', log_short=True, max_thread_count=4, model_name='ST_QUV_NODOG_272_GL_Db2_ev8', mos_file='features/LIVE_HFR_metadata.csv', num_cont=16, num_dists=30, num_iterations=100, out_file='result/LIVE_HFR_ST_QUV_NODOG_272_GL_Db2_ev8_SVR_corr_bc_two.mat', use_parallel=True)
 1 th repeated holdout test
 2 th repeated holdout test
 3 th repeated holdout test
@@ -1933,7 +1933,7 @@ RMSE Test: 9.02196606649385 (std: 1.2294092108756067)
 
 
 Overall 55.081722021102905 secs lapsed..
-Namespace(color_only=False, dataset_name='LIVE_HFR', feature_file='features/LIVE_HFR_ST_QUV_NODOG_272_GL_Db2_ev4_feats.mat', log_file='logs/LIVE_HFR_regression_bc_two.log', log_short=True, max_thread_count=4, model_name='ST_QUV_NODOG_272_GL_Db2_ev4', mos_file='features/LIVE_HFR_metadata.csv', num_cont=16, num_dists=30, num_iterations=100, out_file='result/LIVE_HFR_ST_QUV_NODOG_272_GL_Db2_ev4_SVR_corr_bc_two.mat', use_parallel=True)
+Namespace(color_only=False, dataset_name='LIVE_HFR', feature_file='features/LIVE_HFR_ST_HIFRVIQ_Db2_ev4_feats.mat', log_file='logs/LIVE_HFR_regression_bc_two.log', log_short=True, max_thread_count=4, model_name='ST_QUV_NODOG_272_GL_Db2_ev4', mos_file='features/LIVE_HFR_metadata.csv', num_cont=16, num_dists=30, num_iterations=100, out_file='result/LIVE_HFR_ST_QUV_NODOG_272_GL_Db2_ev4_SVR_corr_bc_two.mat', use_parallel=True)
 1 th repeated holdout test2 th repeated holdout test
 3 th repeated holdout test
 4 th repeated holdout test
@@ -2148,7 +2148,7 @@ RMSE Test: 8.847031487119597 (std: 1.2504749306044927)
 
 
 Overall 55.13237380981445 secs lapsed..
-Namespace(color_only=False, dataset_name='LIVE_HFR', feature_file='features/LIVE_HFR_ST_QUV_NODOG_272_GL_Bior22_ev8_feats.mat', log_file='logs/LIVE_HFR_regression_bc_two.log', log_short=True, max_thread_count=4, model_name='ST_QUV_NODOG_272_GL_Bior22_ev8', mos_file='features/LIVE_HFR_metadata.csv', num_cont=16, num_dists=30, num_iterations=100, out_file='result/LIVE_HFR_ST_QUV_NODOG_272_GL_Bior22_ev8_SVR_corr_bc_two.mat', use_parallel=True)
+Namespace(color_only=False, dataset_name='LIVE_HFR', feature_file='features/LIVE_HFR_ST_HIFRVIQ_Bior22_ev8_feats.mat', log_file='logs/LIVE_HFR_regression_bc_two.log', log_short=True, max_thread_count=4, model_name='ST_QUV_NODOG_272_GL_Bior22_ev8', mos_file='features/LIVE_HFR_metadata.csv', num_cont=16, num_dists=30, num_iterations=100, out_file='result/LIVE_HFR_ST_QUV_NODOG_272_GL_Bior22_ev8_SVR_corr_bc_two.mat', use_parallel=True)
 1 th repeated holdout test
 748-dim features, using SVR
 2 th repeated holdout test
@@ -2363,7 +2363,7 @@ RMSE Test: 8.937762901335867 (std: 1.2323645100916758)
 
 
 Overall 169.99650263786316 secs lapsed..
-Namespace(color_only=False, dataset_name='LIVE_HFR', feature_file='features/LIVE_HFR_ST_QUV_NODOG_272_GL_Bior22_ev4_feats.mat', log_file='logs/LIVE_HFR_regression_bc_two.log', log_short=True, max_thread_count=4, model_name='ST_QUV_NODOG_272_GL_Bior22_ev4', mos_file='features/LIVE_HFR_metadata.csv', num_cont=16, num_dists=30, num_iterations=100, out_file='result/LIVE_HFR_ST_QUV_NODOG_272_GL_Bior22_ev4_SVR_corr_bc_two.mat', use_parallel=True)
+Namespace(color_only=False, dataset_name='LIVE_HFR', feature_file='features/LIVE_HFR_ST_HIFRVIQ_Bior22_ev4_feats.mat', log_file='logs/LIVE_HFR_regression_bc_two.log', log_short=True, max_thread_count=4, model_name='ST_QUV_NODOG_272_GL_Bior22_ev4', mos_file='features/LIVE_HFR_metadata.csv', num_cont=16, num_dists=30, num_iterations=100, out_file='result/LIVE_HFR_ST_QUV_NODOG_272_GL_Bior22_ev4_SVR_corr_bc_two.mat', use_parallel=True)
 1 th repeated holdout test
 748-dim features, using SVR
 2 th repeated holdout test

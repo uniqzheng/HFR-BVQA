@@ -6,6 +6,7 @@ window = fspecial('gaussian', filtlength, filtlength/6);
 window = window/sum(sum(window));
 mu = imfilter(img, window, 'replicate');
 mu_sq = mu.*mu;
+p=abs(imfilter(img.*img, window, 'replicate') - mu_sq);
 sigma = sqrt(abs(imfilter(img.*img, window, 'replicate') - mu_sq));
 struct = (img-mu)./(sigma+1);%mscn
 %struct = (img-mu); %ms

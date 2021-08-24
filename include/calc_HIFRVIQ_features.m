@@ -19,7 +19,7 @@ function feats_frames = calc_HIFRVIQ_features(test_video, width, height, ...
     if strcmp(pixfmt, 'yuv420p')
         nb_frames = floor(file_length/width/height/1.5); % for 8 bit
     else
-        nb_frames = floor(file_length/width/height/3.0); % for 10 bit
+        nb_frames = floor(file_length/width/height/1.5); % for 10 bit
     end
     fprintf('nb_frames: %d\n',nb_frames);
     % get features for each chunk
@@ -30,9 +30,9 @@ function feats_frames = calc_HIFRVIQ_features(test_video, width, height, ...
         fprintf('Processing %d-th block...\n', blk_idx);
         end
         % read uniformly sampled 3 frames for each 1-sec chunk
-        this_YUV_frame = YUVread(test_file,[width height],fr);
-        prev_YUV_frame = YUVread(test_file,[width height],max(1,fr-floor(framerate/3)));
-        this_rgb = ycbcr2rgb(uint8(this_YUV_frame));
+        this_YUV_frame = YUVread(test_file,[width height],fr,pixfmt);
+        prev_YUV_frame = YUVread(test_file,[width height],max(1,fr-floor(framerate/3)),pixfmt);
+        %this_rgb = ycbcr2rgb(uint8(this_YUV_frame));
     	prev_rgb = ycbcr2rgb(uint8(prev_YUV_frame));
 
         % subsample to 512p resolution
@@ -48,7 +48,7 @@ function feats_frames = calc_HIFRVIQ_features(test_video, width, height, ...
         tic
         fprintf('- Extracting Spatial NSS features (2 fps) ...')
         end
-        this_feats_spt = HIFRVIQ_spatial_features(this_rgb);
+        this_feats_spt = HIFRVIQ_spatial_features(this_YUV_frame);
         if log_level == 1, toc; end
         feats_per_frame = [feats_per_frame,this_feats_spt];
         
@@ -57,7 +57,7 @@ function feats_frames = calc_HIFRVIQ_features(test_video, width, height, ...
         fprintf('- Extracting temporal NSS features (8 fps) ...')
         tic
         end
-        wfun = load(fullfile('include', 'WPT_Filters', 'haar_wpt_3.mat'));
+        wfun = load(fullfile('include', 'WPT_Filters', 'db2_wpt_3.mat'));
         wfun = wfun.wfun;
         frames_wpt = zeros(size(prev_rgb, 1), size(prev_rgb, 2), size(wfun, 2));
         fr_idx_start = max(1, fr - floor(size(wfun, 2) / 2));
@@ -65,7 +65,7 @@ function feats_frames = calc_HIFRVIQ_features(test_video, width, height, ...
         fr_wpt_cnt = 1;
         % read enough number of frames for temporal bandpass
         for fr_wpt = fr_idx_start:fr_idx_end
-            YUV_tmp = YUVread(test_file, [width height], fr_wpt);
+            YUV_tmp = YUVread(test_file, [width height], fr_wpt, pixfmt);
             if ratio < 1
                 frames_wpt(:,:,fr_wpt_cnt) = imresize(YUV_tmp(:,:,1), ratio);
             else
@@ -114,7 +114,7 @@ function YUV = YUVread(f,dim,frnum,type)
 		% Read V-component
         V=fread(f,dim(1)*dim(2)/4,'uchar');
     else
-        fseek(f,(frnum-1)*3.0*dim(1)*dim(2), 'bof'); % Frame read for 10 bit
+        fseek(f,(frnum-1)*1.5*dim(1)*dim(2), 'bof'); % Frame read for 10 bit
 		%Read Y-component
         Y=fread(f,dim(1)*dim(2),'uint16');
         % Read U-component

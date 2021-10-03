@@ -1,22 +1,14 @@
 #!/bin/bash
 
 MODELS=(
-   #'ST_HIFRVIQ_Haar'
-   #'ST_HIFRVIQ_Haar_ev16'
-   #'ST_HIFRVIQ_Haar_ev8'
-   #'ST_HIFRVIQ_Haar_ev4'
-   #'ST_HIFRVIQ_Db2'
-   #'ST_HIFRVIQ_Db2_ev16'
-   #'ST_HIFRVIQ_Db2_ev8'
-   #'ST_HIFRVIQ_Db2_ev4'
-   #'ST_HIFRVIQ_Bior22'
-   #'ST_HIFRVIQ_Bior22_ev16'
-   #'ST_HIFRVIQ_Bior22_ev8'
-   #'ST_HIFRVIQ_Bior22_ev4'
-   )
+  'FAVER_Haar'
+  'FAVER_Db2'
+  'FAVER_Bior22'
+   
+)
 
 DATASETS=(
-  "LIVE_HFR"
+   'LIVE_HFR'
 )
 
 for m in "${MODELS[@]}"
@@ -26,15 +18,15 @@ do
 
   feature_file=features/${DS}_${m}_feats.mat
   mos_file=features/${DS}_metadata.csv
-  out_file=result/${DS}_${m}_SVR_corr_bc.mat
-  log_file=logs/${DS}_regression_bc.log
+  out_file=result/${DS}_${m}_SVR_corr_bc_two.mat
+  log_file=logs/${DS}_regression_bc_two.log
 
 #   echo "$m" 
 #   echo "${feature_file}"
 #   echo "${out_file}"
 #   echo "${log_file}"
 
-  cmd="python src/evaluate_bvqa_features_regression.py"
+  cmd="python src/evaluate_bvqa_features_by_content_regression_traintwo.py"
   cmd+=" --model_name $m"
   cmd+=" --dataset_name ${DS}"
   cmd+=" --feature_file ${feature_file}"

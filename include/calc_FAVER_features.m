@@ -19,7 +19,7 @@ function feats_frames = calc_FAVER_features(test_video,width, height, ...
     if strcmp(pixfmt, 'yuv420p')
         nb_frames = floor(file_length/width/height/1.5); % for 8 bit
     else
-        nb_frames = floor(file_length/width/height/3); % for 10 bit
+        nb_frames = floor(file_length/width/height/3.0); % for 10 bit
     end
     fprintf('nb_frames: %d\n',nb_frames);
     % get features for each chunk
@@ -43,24 +43,21 @@ function feats_frames = calc_FAVER_features(test_video,width, height, ...
          end
         
         feats_per_frame = [];
-        %% extract spatial NSS features - 272-dim
-%         if log_level == 1
-%         tic
-%         fprintf('- Extracting Spatial NSS features (2 fps) ...')
-%         end
+        
+        %% extract spatial NSS features - 272-dim, used only in fr/sec
         this_feats_spt = FAVER_spatial_features(this_YUV_frame);
-%         if log_level == 1, toc; end
         feats_per_frame = [feats_per_frame,this_feats_spt];
         
-        % extract temporal NSS features - 476-dim
+        %% extract temporal NSS features - 476-dim
         if log_level == 1
         fprintf('- Extracting temporal NSS features (8 fps) ...')
         tic
         end
-        wfun = load(fullfile('WPT_Filters', 'bior22_wpt_3.mat'));
+        wfun = load(fullfile('WPT_Filters', 'haar_wpt_3.mat'));
         wfun = wfun.wfun;
         frames_wpt = zeros(size(prev_rgb, 1), size(prev_rgb, 2), size(wfun, 2));
         fr_idx_start = max(1, fr - floor(size(wfun, 2) / 2));
+        %fr_idx_start = fr;
         fr_idx_end = min(nb_frames - 3, fr_idx_start + size(wfun, 2) - 1);
         fr_wpt_cnt = 1;
         % read enough number of frames for temporal bandpass
@@ -114,7 +111,7 @@ function YUV = YUVread(f,dim,frnum,type)
 		% Read V-component
         V=fread(f,dim(1)*dim(2)/4,'uchar');
     else
-        fseek(f,(frnum-1)*1.5*dim(1)*dim(2), 'bof'); % Frame read for 10 bit
+        fseek(f,(frnum-1)*3.0*dim(1)*dim(2), 'bof'); % Frame read for 10 bit
 		%Read Y-component
         Y=fread(f,dim(1)*dim(2),'uint16');
         % Read U-component

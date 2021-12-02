@@ -2,13 +2,13 @@
 % 
 close all; 
 clear;
-addpath(genpath('../include/FAVER'));
+addpath(genpath('../include'));
 
 %% parameters
-algo_name = 'FAVER_Haar_temporal';  %haar, db2, bior22, spatial
+algo_name = 'FAVER_Haar';  %haar, db2, bior22, spatial
 
 data_name = 'LIVE_HFR';
-data_path = '../../database/database';
+data_path = '../../database/';
 write_file = true;
 
 video_tmp = '../tmp';
@@ -20,7 +20,7 @@ num_videos = size(filelist,1);
 out_mat_name = fullfile(feat_path, [data_name,'_',algo_name,'_feats.mat']);
 minside = 512.0;
 log_level = 0;
-feats_mat = zeros( num_videos, 476);% temporal--476, spatial--272
+feats_mat = zeros( num_videos, 748);% temporal--476, spatial--272
 
 for i = 1:num_videos
     % get video file name

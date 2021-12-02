@@ -152,11 +152,11 @@ def evaluate_bvqa_one_split(i, X, y, num_cont, num_dists, log_short):
     print('{} th repeated holdout test'.format(i))
     t_start = time.time()
   # train test split
-  idx_train, idx_test = train_test_split(range(num_cont), test_size=0.2, #0.1875--81.25%,  0.2----75%
+  idx_train, idx_test = train_test_split(range(num_cont), test_size=0.1875, #0.1875--81.25%,  0.2----75%
       random_state=math.ceil(8.8*i))
   #print('idx_train" ', idx_train)
   #print('idx_test" ', idx_test)
-  idx_param_train, idx_param_test = train_test_split(range(len(idx_train)), test_size=0.2,
+  idx_param_train, idx_param_test = train_test_split(range(len(idx_train)), test_size=0.1875,
        random_state=math.ceil(6.6*i))
   X_train = X[idx_expand(idx_train, num_dists), :]
   X_test = X[idx_expand(idx_test, num_dists), :]
@@ -249,13 +249,13 @@ def main(args):
       y = array[1:,1]
   elif args.dataset_name == 'YOUTUBE_UGC':
       y = array[1:,4]
-  elif args.dataset_name == 'LIVE_VQA':
+  elif args.dataset_name == 'BVI_HFR':
       y = array[1:,1]
   elif args.dataset_name == 'LIVE_HFR':
       y = array[1:,1]
   y = np.array(list(y), dtype=np.float)
   X_mat = scipy.io.loadmat(args.feature_file)
-  X = np.asarray(X_mat['feats_mat'], dtype=np.float)
+  X = np.asarray(X_mat['STfeat'], dtype=np.float)
 
   '''57 grayscale videos in YOUTUBE_UGC dataset, we do not consider them for fair comparison'''
   if args.color_only and args.dataset_name == 'YOUTUBE_UGC':

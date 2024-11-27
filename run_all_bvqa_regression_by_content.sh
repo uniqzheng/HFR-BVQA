@@ -1,10 +1,18 @@
 #!/bin/bash
 
 MODELS=(
-  'FAVER_Haar'
-  'FAVER_Db2'
-  'FAVER_Bior22'
-   
+  #'FAVER_Haar'
+  #'FAVER_db2'
+  #'FAVER_bior22'
+  #'NIQE'
+  #'BRISQUE'
+  #'VIDEVAL'
+  #'NIQE'
+   #'RAPIQUE'
+  #'CORNIA10K'
+  'FAVER_Haar_Fast_persec_downsample'
+  'FAVER_Db2_Fast_persec_downsample'
+  'FAVER_Bior22_Fast_persec_downsample'
 )
 
 DATASETS=(
@@ -27,7 +35,7 @@ do
 #   echo "${out_file}"
 #   echo "${log_file}"
 
-  cmd="python src/evaluate_bvqa_features_by_content_regression_traintwo.py" 
+  cmd="python src/evaluate_bvqa_features_by_content_regression_trainthree.py"
   cmd+=" --model_name $m"
   cmd+=" --dataset_name ${DS}"
   cmd+=" --feature_file ${feature_file}"
@@ -37,8 +45,8 @@ do
   cmd+=" --num_cont 16" # 16-LIVE, 22-BVI
   cmd+=" --num_dists 30" # 30-LIVE, 4-BVI
   cmd+=" --use_parallel"
-  cmd+=" --log_short"
-  cmd+=" --num_iterations 100"
+  #cmd+=" --log_short"
+  cmd+=" --num_iterations 150"
 
   echo "${cmd}"
 

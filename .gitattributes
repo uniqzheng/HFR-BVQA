@@ -1,0 +1,1 @@
+src/MotionExtractor/checkpoints/Kinetics/SLOWFAST_8x8_R50.pkl filter=lfs diff=lfs merge=lfs -text
